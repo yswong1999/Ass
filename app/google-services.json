@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "91194426070",
+    "firebase_url": "https://myassfirebase-default-rtdb.firebaseio.com",
+    "project_id": "myassfirebase",
+    "storage_bucket": "myassfirebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:91194426070:android:ecdaa4d920d1ea23e6bf77",
+        "android_client_info": {
+          "package_name": "com.example.madass"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "91194426070-jgnr58cb5bntgidct4d7g722ocf6fo70.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRzilRKy5y6X-Wz4rTE-iHMvAaO7d2GrI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "91194426070-jgnr58cb5bntgidct4d7g722ocf6fo70.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
