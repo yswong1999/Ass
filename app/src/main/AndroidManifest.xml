@@ -8,14 +8,62 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MADAss">
-        <activity android:name=".MainActivity">
+        android:theme="@style/Theme.HotelManagement">
+        <activity android:name=".Test"></activity>
+        <activity
+            android:name=".CheckOutList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CheckInList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CleanerRoomManagement"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CounterRoomManagement"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RoomRegister"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MyTasks"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Login"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".CounterHome"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CleanerHome"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AssignedTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ChangePassword"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Notification"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Profile"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Announcement"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TaskAllocation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ManagerHome"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

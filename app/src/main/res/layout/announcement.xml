@@ -7,39 +7,38 @@
     android:layout_height="match_parent">
 
     <EditText
-        android:id="@+id/tfUsername"
+        android:id="@+id/tfTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Username"
+        android:hint="Title"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.399" />
+        app:layout_constraintVertical_bias="0.316" />
 
     <EditText
-        android:id="@+id/tfPassword"
+        android:id="@+id/tfContent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="48dp"
         android:ems="10"
-        android:hint="Password"
+        android:hint="Content"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="@+id/tfUsername"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/tfUsername"
-        app:layout_constraintTop_toBottomOf="@+id/tfUsername" />
+        app:layout_constraintEnd_toEndOf="@+id/tfTitle"
+        app:layout_constraintStart_toStartOf="@+id/tfTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tfTitle" />
 
-    <TextView
-        android:id="@+id/tvSuccessful"
+    <Button
+        android:id="@+id/btnPost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tfPassword" />
+        android:layout_marginTop="52dp"
+        android:text="post"
+        app:layout_constraintEnd_toEndOf="@+id/tfContent"
+        app:layout_constraintStart_toStartOf="@+id/tfContent"
+        app:layout_constraintTop_toBottomOf="@+id/tfContent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
