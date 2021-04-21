@@ -32,9 +32,9 @@ class Notification : AppCompatActivity() {
                 myNotificationList.clear()
                 for(s in snapshot.children){
 
-                   val notificationTitle:String = s.child("annTitle").getValue().toString()
-                    val notificationContent:String = s.child("annContent").getValue().toString()
-                    val notificationDate:String = s.child("announcedTime").getValue().toString()
+                   val notificationTitle:String = s.child("title").getValue().toString()
+                    val notificationContent:String = s.child("content").getValue().toString()
+                    val notificationDate:String = s.child("time").getValue().toString()
                     addData(notificationTitle, notificationContent,notificationDate)
                 }
                 recycleView.adapter = MyAdapterNotification(myNotificationList)
