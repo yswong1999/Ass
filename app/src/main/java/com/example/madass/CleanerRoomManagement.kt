@@ -64,6 +64,7 @@ class CleanerRoomManagement : AppCompatActivity() {
         //myRef.addListenerForSingleValueEvent(getData)
         myRef.addValueEventListener(getData)
     }
+
     fun addData(roomNo:String,roomCleanStatus:String) {
 
         val room = roomCleaningView(roomNo, roomCleanStatus)

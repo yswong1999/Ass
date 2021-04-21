@@ -32,15 +32,13 @@ class CleanerHome : AppCompatActivity() {
         val btnMyTasks : Button = findViewById(R.id.btnMyTasks)
         btnMyTasks.setOnClickListener()
         {
-            val intent = Intent(this,MyTasks::class.java)
-            startActivity(intent)
+            startActivity(Intent(this,MyTasks::class.java))
         }
 
         val btnCleanerRoomManagement : Button = findViewById(R.id.btnCleanerRoomManagement)
         btnCleanerRoomManagement.setOnClickListener()
         {
-            val intent = Intent(this,CleanerRoomManagement::class.java)
-            startActivity(intent)
+            startActivity(Intent(this,CleanerRoomManagement::class.java))
         }
     }
 }

@@ -78,7 +78,7 @@ class MyRoomCounterAdapter(private val roomList :List<RoomCounterClass>) :Recycl
                     setPositiveButton("Yes",
                         DialogInterface.OnClickListener { dialog, id ->
                             CounterRoomManagement().myRoomRef.child(roomList[position].roomNo).child("custIC").setValue("0")
-
+                            CounterRoomManagement().myRoomRef.child(roomList[position].roomNo).child("cleanStatus").setValue("Uncleaned")
 
 
                             val timeyr = Calendar.getInstance().get(Calendar.YEAR).toString()
