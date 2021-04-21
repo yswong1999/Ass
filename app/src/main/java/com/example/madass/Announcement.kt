@@ -52,9 +52,12 @@ class Announcement : AppCompatActivity() {
             val id:String = currentIndex;
             val title:String = findViewById<TextView>(R.id.tfTaskTitle).text.toString()
             val content:String = findViewById<TextView>(R.id.tfTaskDescription).text.toString()
-            val time = SimpleDateFormat("yyyy.MM.dd HH:mm aa", Locale.getDefault())
+
+            var time = SimpleDateFormat("yyyy.MM.dd HH:mm aa", Locale.getDefault())
 
             TimeZone.setDefault(TimeZone.getTimeZone("GMT+8"));
+
+            var currentDateandTime = time.format(Date())
 
             myAnnouncementRef.child(id).child("Title").setValue(title)
             myAnnouncementRef.child(id).child("Content").setValue(content)
