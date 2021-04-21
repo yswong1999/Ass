@@ -18,8 +18,8 @@ class ManagerHome : AppCompatActivity() {
             startActivity(Intent(this,Announcement::class.java))
         }
 
-        val taskAllocationButton :Button = findViewById(R.id.btnTaskAllocation)
-        taskAllocationButton.setOnClickListener()
+        val btnTaskAllocation :Button = findViewById(R.id.btnTaskAllocation)
+        btnTaskAllocation.setOnClickListener()
         {
             startActivity(Intent(this,TaskAllocation::class.java))
         }

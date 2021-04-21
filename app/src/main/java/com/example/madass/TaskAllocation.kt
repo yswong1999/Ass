@@ -17,17 +17,17 @@ class TaskAllocation : AppCompatActivity() {
 
         }
 
-        val NotificationButton :ImageButton = findViewById(R.id.notificationBtn9)
-        NotificationButton.setOnClickListener()
-        {
-            startActivity(Intent(this,Notification::class.java))
-        }
-
-        val HomeButton :ImageButton = findViewById(R.id.homeBtn8)
-        HomeButton.setOnClickListener()
-        {
-            startActivity(Intent(this,ManagerHome::class.java))
-        }
+//        val NotificationButton :ImageButton = findViewById(R.id.notificationBtn9)
+//        NotificationButton.setOnClickListener()
+//        {
+//            startActivity(Intent(this,Notification::class.java))
+//        }
+//
+//        val HomeButton :ImageButton = findViewById(R.id.homeBtn8)
+//        HomeButton.setOnClickListener()
+//        {
+//            startActivity(Intent(this,ManagerHome::class.java))
+//        }
 
         val profilePicButton : ImageButton = findViewById(R.id.profileBtn7)
         profilePicButton.setOnClickListener()
@@ -40,7 +40,6 @@ class TaskAllocation : AppCompatActivity() {
         {
             startActivity(Intent(this,AssignedTask::class.java))
         }
-
 
     }
 }

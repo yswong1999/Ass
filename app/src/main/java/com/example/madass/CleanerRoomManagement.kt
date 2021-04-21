@@ -1,8 +1,6 @@
 package com.example.madass
 
-import android.content.Intent
 import android.os.Bundle
-import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -29,17 +27,17 @@ class CleanerRoomManagement : AppCompatActivity() {
         recycleView.layoutManager = LinearLayoutManager(this)
         recycleView.setHasFixedSize(true)
 
-        val NotificationButton : ImageButton = findViewById(R.id.notificationBtn)
-        NotificationButton.setOnClickListener()
-        {
-            startActivity(Intent(this,Notification::class.java))
-        }
-
-        val HomeButton : ImageButton = findViewById(R.id.homeBtn)
-        HomeButton.setOnClickListener()
-        {
-            startActivity(Intent(this,CleanerHome::class.java))
-        }
+//        val NotificationButton : ImageButton = findViewById(R.id.notificationBtn)
+//        NotificationButton.setOnClickListener()
+//        {
+//            startActivity(Intent(this,Notification::class.java))
+//        }
+//
+//        val HomeButton : ImageButton = findViewById(R.id.homeBtn)
+//        HomeButton.setOnClickListener()
+//        {
+//            startActivity(Intent(this,CleanerHome::class.java))
+//        }
 
         //MyAdapterCleaner = RecyclerAdapter(posts, applicationContext)
         var getData = object: ValueEventListener {
