@@ -11,41 +11,34 @@ class TaskAllocation : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_task_allocation)
 
-        val postButton :Button = findViewById(R.id.btnApply)
-        postButton.setOnClickListener()
+        val btnTaskAssign :Button = findViewById(R.id.btnTaskAssign)
+        btnTaskAssign.setOnClickListener()
         {
 
         }
+
         val NotificationButton :ImageButton = findViewById(R.id.notificationBtn9)
         NotificationButton.setOnClickListener()
         {
-            val intent = Intent(this,Notification::class.java)
-
-
-            startActivity(intent)
+            startActivity(Intent(this,Notification::class.java))
         }
+
         val HomeButton :ImageButton = findViewById(R.id.homeBtn8)
         HomeButton.setOnClickListener()
         {
-            val intent = Intent(this,ManagerHome::class.java)
-
-
-            startActivity(intent)
+            startActivity(Intent(this,ManagerHome::class.java))
         }
+
         val profilePicButton : ImageButton = findViewById(R.id.profileBtn7)
         profilePicButton.setOnClickListener()
         {
-            val intent = Intent(this,Profile::class.java)
-            startActivity(intent)
+            startActivity(Intent(this,Profile::class.java))
         }
 
         val assignedButton :Button = findViewById(R.id.btnApply)
         assignedButton.setOnClickListener()
         {
-            val intent = Intent(this,AssignedTask::class.java)
-
-
-            startActivity(intent)
+            startActivity(Intent(this,AssignedTask::class.java))
         }
 
 

@@ -16,6 +16,10 @@ class CleanerRoomManagement : AppCompatActivity() {
     val database = FirebaseDatabase.getInstance()
     val myRef = database.getReference("Room")
 
+    companion object{
+        var currentlyCleaning = false
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cleaner_room_management)
@@ -25,6 +29,18 @@ class CleanerRoomManagement : AppCompatActivity() {
         recycleView.layoutManager = LinearLayoutManager(this)
         recycleView.setHasFixedSize(true)
 
+        val NotificationButton : ImageButton = findViewById(R.id.notificationBtn)
+        NotificationButton.setOnClickListener()
+        {
+            startActivity(Intent(this,Notification::class.java))
+        }
+
+        val HomeButton : ImageButton = findViewById(R.id.homeBtn)
+        HomeButton.setOnClickListener()
+        {
+            startActivity(Intent(this,CleanerHome::class.java))
+        }
+
         //MyAdapterCleaner = RecyclerAdapter(posts, applicationContext)
         var getData = object: ValueEventListener {
 
@@ -33,6 +49,7 @@ class CleanerRoomManagement : AppCompatActivity() {
             }
             override fun onDataChange(snapshot: DataSnapshot) {
                 myRoomNoList.clear()
+                currentlyCleaning = false;
                 for(s in snapshot.children){
                     val roomNo:String = s.key.toString()
                     val roomCleanStatus:String = s.child("cleanStatus").getValue().toString()
@@ -47,29 +64,15 @@ class CleanerRoomManagement : AppCompatActivity() {
         //myRef.addListenerForSingleValueEvent(getData)
         myRef.addValueEventListener(getData)
     }
-    fun addData(roomNo:String,roomCleanStatus:String){
+    fun addData(roomNo:String,roomCleanStatus:String) {
 
-        val room = roomCleaningView(roomNo,roomCleanStatus)
+        val room = roomCleaningView(roomNo, roomCleanStatus)
 
-        if (room.roomCleanStatus=="Uncleaned" || room.roomCleanStatus=="Cleaning"){
+        if (room.roomCleanStatus == "Uncleaned") {
             myRoomNoList.add(room)
-        }
-
-        val NotificationButton : ImageButton = findViewById(R.id.notificationBtn)
-        NotificationButton.setOnClickListener()
-        {
-            val intent = Intent(this,Notification::class.java)
-
-
-            startActivity(intent)
-        }
-        val HomeButton : ImageButton = findViewById(R.id.homeBtn)
-        HomeButton.setOnClickListener()
-        {
-            val intent = Intent(this,CleanerHome::class.java)
-
-
-            startActivity(intent)
+        } else if (room.roomCleanStatus == Login.staffName) {
+            myRoomNoList.add(room)
+            currentlyCleaning = true
         }
     }
 }

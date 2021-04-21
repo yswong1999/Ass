@@ -19,6 +19,10 @@ class Login : AppCompatActivity() {
 
     private lateinit var auth: FirebaseAuth
 
+    companion object{
+        var staffName = ""
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
@@ -41,7 +45,7 @@ class Login : AppCompatActivity() {
             override fun onDataChange(snapshot: DataSnapshot) {
 
                 type = snapshot.child(auth.getCurrentUser().getUid()).child("type").getValue().toString()
-
+                staffName = snapshot.child(auth.getCurrentUser().getUid()).child("name").getValue().toString()
             }
 
         }

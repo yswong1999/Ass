@@ -62,6 +62,7 @@ class Announcement : AppCompatActivity() {
             myAnnouncementRef.child(id).child("title").setValue(title)
             myAnnouncementRef.child(id).child("content").setValue(content)
             myAnnouncementRef.child(id).child("time").setValue(currentDateandTime)
+
         }
 
         val notificationButton :ImageButton = findViewById(R.id.notificationBtn3)

@@ -49,22 +49,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        app:checkedButton="@id/fGBtn"
+        app:checkedButton="@id/f1Btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/typeBtnGrp"
         app:selectionRequired="true"
         app:singleSelection="true">
-
-        <Button
-            android:id="@+id/fGBtn"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="FG"
-            android:textColor="@color/white"
-            tools:layout_editor_absoluteX="47dp"
-            tools:layout_editor_absoluteY="125dp" />
 
         <Button
             android:id="@+id/f1Btn"
@@ -73,7 +63,7 @@
             android:layout_height="wrap_content"
             android:text="F1"
             android:textColor="@color/white"
-            tools:layout_editor_absoluteX="153dp"
+            tools:layout_editor_absoluteX="47dp"
             tools:layout_editor_absoluteY="125dp" />
 
         <Button
@@ -82,6 +72,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="F2"
+            android:textColor="@color/white"
+            tools:layout_editor_absoluteX="153dp"
+            tools:layout_editor_absoluteY="125dp" />
+
+        <Button
+            android:id="@+id/f3Btn"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="F3"
             android:textColor="@color/white"
             tools:layout_editor_absoluteX="266dp"
             tools:layout_editor_absoluteY="123dp" />

@@ -1,9 +1,11 @@
 package com.example.madass
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 
 class MyAdapter(private val roomList :List<roomCleaningView>) :RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
@@ -21,11 +23,19 @@ class MyAdapter(private val roomList :List<roomCleaningView>) :RecyclerView.Adap
         holder.roomIdTV .setText(roomList[position].roomNo)
 
         holder.acceptBtn .setOnClickListener() {
-            //roomList[position].roomCleanStatus.set
-            CleanerRoomManagement().myRef.child(roomList[position].roomNo).child("cleanStatus").setValue("Cleaning")
-            //holder.roomIdTV.setBackgroundResource(R.color.yellow)
-            holder.roomIdTV.setBackgroundResource(R.color.yellow)
-            //MainActivity().myRoomNoList.remove(roomList[position])
+            if(!CleanerRoomManagement.currentlyCleaning)
+            {
+                Log.i("TestMyAdapter", CleanerRoomManagement.currentlyCleaning.toString())
+                //roomList[position].roomCleanStatus.set
+                CleanerRoomManagement().myRef.child(roomList[position].roomNo).child("cleanStatus").setValue(Login.staffName)
+                //holder.roomIdTV.setBackgroundResource(R.color.yellow)
+                holder.roomIdTV.setBackgroundResource(R.color.yellow)
+                //MainActivity().myRoomNoList.remove(roomList[position])
+            }
+            else
+            {
+                Toast.makeText(holder.cancelBtn.getContext(), "Your have already accepted a room.", Toast.LENGTH_LONG).show()
+            }
         }
 
         holder.cancelBtn .setOnClickListener() {

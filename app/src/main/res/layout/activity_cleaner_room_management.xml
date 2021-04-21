@@ -5,7 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@drawable/gradient_background"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".CleanerRoomManagement">
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/searchRoomNoTV"

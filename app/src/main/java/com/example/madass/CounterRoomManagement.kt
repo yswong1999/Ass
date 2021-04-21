@@ -80,9 +80,9 @@ class CounterRoomManagement  : AppCompatActivity(){
 
         floorBtnGrp.addOnButtonCheckedListener { _, checkedId, _ ->
             when (checkedId) {
-                R.id.fGBtn -> floor = "FG"
-                R.id.f1Btn -> floor = "F1"
-                R.id.f2Btn -> floor = "F2"
+                R.id.f1Btn -> floor = "FG"
+                R.id.f2Btn -> floor = "F1"
+                R.id.f3Btn -> floor = "F2"
             }
             //Log.i("TestRun", "FloorBtn")
             myRoomRef.addListenerForSingleValueEvent(getData)
@@ -114,9 +114,9 @@ class CounterRoomManagement  : AppCompatActivity(){
             }
 
             when (floor) {
-                "FG" -> floorBtnGrp.check(R.id.fGBtn)
-                "F1" -> floorBtnGrp.check(R.id.f1Btn)
-                "F2" -> floorBtnGrp.check(R.id.f2Btn)
+                "FG" -> floorBtnGrp.check(R.id.f1Btn)
+                "F1" -> floorBtnGrp.check(R.id.f2Btn)
+                "F2" -> floorBtnGrp.check(R.id.f3Btn)
             }
 
         }
