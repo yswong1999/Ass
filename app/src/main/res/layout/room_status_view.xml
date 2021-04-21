@@ -4,7 +4,8 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_background">
 
 
         <Button
@@ -15,6 +16,7 @@
             android:layout_marginStart="80dp"
             android:layout_marginTop="0dp"
             android:layout_toEndOf="@id/roomIdTV"
+            android:backgroundTint="@color/lightgreen"
             android:text="Accept"
             android:textSize="10sp" />
 
@@ -26,6 +28,7 @@
             android:layout_marginStart="40dp"
             android:layout_marginTop="0dp"
             android:layout_toEndOf="@id/roomIdTV"
+            android:backgroundTint="@color/red"
             android:text="Cancel"
             android:textSize="10sp" />
 
@@ -37,6 +40,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="0dp"
             android:layout_toEndOf="@id/cancelBtn"
+            android:backgroundTint="@color/lightgreen"
             android:text="Finish"
             android:textSize="10sp" />
 
@@ -48,7 +52,11 @@
             android:layout_alignParentTop="true"
             android:layout_marginStart="20dp"
             android:layout_marginTop="6dp"
-            android:textAlignment="textStart" />
+            android:text="a"
+            android:textColor="#FFFFFF"
+            android:textAlignment="textStart"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
 
     </RelativeLayout>

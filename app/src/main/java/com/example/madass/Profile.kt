@@ -10,7 +10,7 @@ import com.google.firebase.auth.FirebaseAuth
 class Profile : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_profile_activity)
+        setContentView(R.layout.activity_profile)
 
         val NotificationButton : ImageButton = findViewById(R.id.notificationBtn8)
         NotificationButton.setOnClickListener()

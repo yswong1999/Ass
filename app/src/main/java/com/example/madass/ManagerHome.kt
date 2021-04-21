@@ -12,36 +12,29 @@ class ManagerHome : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_manager_home)
 
-        val announcementButton :Button = findViewById(R.id.btnAnnouncement)
-        announcementButton.setOnClickListener()
+        val btnAnnouncement :Button = findViewById(R.id.btnAnnouncement)
+        btnAnnouncement.setOnClickListener()
         {
-            val intent = Intent(this,Announcement::class.java)
-            startActivity(intent)
+            startActivity(Intent(this,Announcement::class.java))
         }
 
         val taskAllocationButton :Button = findViewById(R.id.btnTaskAllocation)
         taskAllocationButton.setOnClickListener()
         {
-            val intent = Intent(this,TaskAllocation::class.java)
-            startActivity(intent)
+            startActivity(Intent(this,TaskAllocation::class.java))
         }
 
         val NotificationButton :ImageButton = findViewById(R.id.notificationBtn2)
         NotificationButton.setOnClickListener()
         {
-            val intent = Intent(this,Notification::class.java)
-            startActivity(intent)
+            startActivity(Intent(this,Notification::class.java))
         }
 
         val profilePicButton :ImageButton = findViewById(R.id.profileBtn)
         profilePicButton.setOnClickListener()
         {
-            val intent = Intent(this,Profile::class.java)
-            startActivity(intent)
+            startActivity(Intent(this,Profile::class.java))
         }
-
-
-
 
     }
 }

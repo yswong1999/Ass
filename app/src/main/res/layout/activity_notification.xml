@@ -7,95 +7,68 @@
     android:background="@drawable/gradient_background"
     tools:context=".Notification">
 
-    <ImageButton
-        android:id="@+id/homeBtn2"
-        android:layout_width="170dp"
-        android:layout_height="94dp"
-        android:layout_marginStart="3dp"
-        android:background="#4E2A04"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/notificationBtn2"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnAnnouncement"
-        app:layout_constraintVertical_bias="0.993"
-        app:srcCompat="@drawable/ic_home" />
 
-    <ImageButton
-        android:id="@+id/notificationBtn4"
-        android:layout_width="170dp"
-        android:layout_height="94dp"
-        android:background="#4E2A04"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.995"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnAnnouncement"
-        app:layout_constraintVertical_bias="0.993"
-        app:srcCompat="@drawable/ic_notification" />
+        <ImageButton
+            android:id="@+id/profileBtn4"
+            android:layout_width="69dp"
+            android:layout_height="58dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="18dp"
+            app:layout_constraintStart_toEndOf="@+id/textView"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView13"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Notification"
-        android:textColor="#FFFFFF"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/notificationBtn4"
-        app:layout_constraintEnd_toEndOf="@+id/notificationBtn4"
-        app:layout_constraintHorizontal_bias="0.519"
-        app:layout_constraintStart_toStartOf="@+id/notificationBtn4"
-        app:layout_constraintTop_toTopOf="@+id/notificationBtn4"
-        app:layout_constraintVertical_bias="0.771" />
+        <Button
+            android:id="@+id/homeBtn5"
+            android:layout_width="170dp"
+            android:layout_height="94dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="0dp"
+            android:text="Home"
+            android:textSize="14sp"
+            app:backgroundTint="#4E2A04"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/notificationRecyclerViewId" />
 
-    <TextView
-        android:id="@+id/textView12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Home"
-        android:textColor="#FFFFFF"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/homeBtn2"
-        app:layout_constraintEnd_toEndOf="@+id/homeBtn2"
-        app:layout_constraintStart_toStartOf="@+id/homeBtn2"
-        app:layout_constraintTop_toTopOf="@+id/homeBtn2"
-        app:layout_constraintVertical_bias="0.771" />
+        <Button
+            android:id="@+id/notificationBtn5"
+            android:layout_width="170dp"
+            android:layout_height="94dp"
+            android:layout_marginStart="39dp"
+            android:layout_marginTop="0dp"
+            android:text="Notification"
+            android:textSize="14sp"
+            app:backgroundTint="#4E2A04"
+            app:layout_constraintStart_toEndOf="@+id/homeBtn5"
+            app:layout_constraintTop_toBottomOf="@+id/notificationRecyclerViewId" />
 
-    <ImageView
-        android:id="@+id/imageView10"
-        android:layout_width="69dp"
-        android:layout_height="69dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/hotellogo2" />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="110dp"
+            android:layout_marginTop="54dp"
+            android:text="Notification"
+            android:textColor="#FFFFFF"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageButton
-        android:id="@+id/profileBtn4"
-        android:layout_width="69dp"
-        android:layout_height="58dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.997"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/ic_profile" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/notificationRecyclerViewId"
+            android:layout_width="368dp"
+            android:layout_height="410dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="19dp"
+            app:layout_constraintBottom_toTopOf="@+id/homeBtn5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.428"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:layout_constraintVertical_bias="0.12"
+            tools:listitem="@layout/activity_notification_view" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Notification"
-        android:textColor="#FFFFFF"
-        android:textSize="36sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.508"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.117" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

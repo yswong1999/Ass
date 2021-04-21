@@ -17,7 +17,7 @@ class MyTasks : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_my_task)
+        setContentView(R.layout.activity_my_tasks)
 
         val recycleView: RecyclerView = findViewById(R.id.myTaskRecyclerViewId)
         recycleView.adapter = MyTasksAdapter(myTaskList)

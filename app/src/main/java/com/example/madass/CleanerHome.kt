@@ -14,22 +14,19 @@ class CleanerHome : AppCompatActivity() {
         val NotificationButton : ImageButton = findViewById(R.id.notificationBtn7)
         NotificationButton.setOnClickListener()
         {
-            val intent = Intent(this,Notification::class.java)
-            startActivity(intent)
+            startActivity(Intent(this,Notification::class.java))
         }
 
         val cleanerHomeProfile :ImageButton = findViewById(R.id.cleanerHomeProfile)
         cleanerHomeProfile.setOnClickListener()
         {
-            val intent = Intent(this,Profile::class.java)
-            startActivity(intent)
+            startActivity(Intent(this,Profile::class.java))
         }
 
         val btnCleanerHome : ImageButton = findViewById(R.id.btnCleanerHome)
         btnCleanerHome.setOnClickListener()
         {
-            val intent = Intent(this,Profile::class.java)
-            startActivity(intent)
+            startActivity(Intent(this,Profile::class.java))
         }
 
         val btnMyTasks : Button = findViewById(R.id.btnMyTasks)

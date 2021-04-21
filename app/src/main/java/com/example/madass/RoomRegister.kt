@@ -16,7 +16,7 @@ import com.google.firebase.database.ValueEventListener
 import java.util.*
 
 
-class RoomRegisterActivity  : AppCompatActivity(){
+class RoomRegister  : AppCompatActivity(){
 
     val database = FirebaseDatabase.getInstance()
     val myRegRef = database.getReference("Reg")
@@ -55,13 +55,6 @@ class RoomRegisterActivity  : AppCompatActivity(){
             regTitle.setText(extras.getString("roomNo"))
         }
 
-        val backBtn: Button = findViewById(R.id.backBtn)
-        backBtn.setOnClickListener{
-            //Log.i("TestRun", "regactivity: " + savedInstanceState!!.getString("search", ""))
-            val intent = Intent(this,RoomCounterActivity::class.java)
-            startActivity(intent)
-        }
-
         val inDate: TextView = findViewById(R.id.inDateTv)
         val name: TextInputEditText = findViewById(R.id.nameET)
         val ic: TextInputEditText = findViewById(R.id.icET)
@@ -84,7 +77,7 @@ class RoomRegisterActivity  : AppCompatActivity(){
             //myCustRef.child(currentIndex).child("room").setValue(extras!!.getString("roomNo"))
             //myRoomRef.child(extras!!.getString("roomNo").toString()).child("custIC").setValue(ic.getText().toString())
 
-            val intent = Intent(this,RoomCounterActivity::class.java)
+            val intent = Intent(this,CounterRoomManagement::class.java)
 
             val builderSuccess: AlertDialog.Builder = this.let {
                 AlertDialog.Builder(it)

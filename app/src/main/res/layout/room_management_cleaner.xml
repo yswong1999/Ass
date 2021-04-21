@@ -3,20 +3,29 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/gradient_background"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <EditText
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/searchRoomNoTV"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
         android:layout_width="220dp"
         android:layout_height="46dp"
         android:layout_marginStart="46dp"
         android:layout_marginTop="51dp"
         android:ems="10"
-        android:hint="room No"
-        android:inputType="textPassword"
+        app:endIconMode="clear_text"
+        app:helperTextTextColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editsearchRoomNoTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="room No"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/searchRoomNoBtn"
@@ -25,6 +34,7 @@
         android:layout_marginStart="12dp"
         android:layout_marginTop="49dp"
         android:text="Search"
+        app:backgroundTint="#4E2A04"
         app:layout_constraintStart_toEndOf="@+id/searchRoomNoTV"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -35,6 +45,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="0dp"
         android:text="Home"
+        app:backgroundTint="#4E2A04"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/recyclerView2" />
 
@@ -45,6 +56,7 @@
         android:layout_marginStart="38dp"
         android:layout_marginTop="0dp"
         android:text="notification"
+        app:backgroundTint="#4E2A04"
         app:layout_constraintStart_toEndOf="@+id/homeBtn"
         app:layout_constraintTop_toBottomOf="@+id/recyclerView2" />
 

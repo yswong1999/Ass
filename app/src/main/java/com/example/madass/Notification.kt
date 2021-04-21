@@ -16,7 +16,7 @@ class Notification : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_notification1)
+        setContentView(R.layout.activity_notification)
 
         val recycleView: RecyclerView = findViewById(R.id.notificationRecyclerViewId)
         recycleView.adapter = MyAdapterNotification(myNotificationList)

@@ -37,12 +37,12 @@ class MyRoomCounterAdapter(private val roomList :List<RoomCounterClass>) :Recycl
             }
         }
 
-        RoomCounterActivity().myRegRef.addListenerForSingleValueEvent(getData)
+        CounterRoomManagement().myRegRef.addListenerForSingleValueEvent(getData)
 
         if (roomList[position].custIC == "0"){
             holder.roomBtn .setOnClickListener() {
                 //Log.i("TestRun", "Wut")
-                val intent = Intent(holder.roomBtn.getContext(),RoomRegisterActivity::class.java)
+                val intent = Intent(holder.roomBtn.getContext(),RoomRegister::class.java)
                 intent.putExtra("roomNo", roomList[position].roomNo)
                 holder.roomBtn.getContext().startActivity(intent)
             }
@@ -77,7 +77,7 @@ class MyRoomCounterAdapter(private val roomList :List<RoomCounterClass>) :Recycl
                     )
                     setPositiveButton("Yes",
                         DialogInterface.OnClickListener { dialog, id ->
-                            RoomCounterActivity().myRoomRef.child(roomList[position].roomNo).child("custIC").setValue("0")
+                            CounterRoomManagement().myRoomRef.child(roomList[position].roomNo).child("custIC").setValue("0")
 
 
 
@@ -86,7 +86,7 @@ class MyRoomCounterAdapter(private val roomList :List<RoomCounterClass>) :Recycl
                             val timedy = Calendar.getInstance().get(Calendar.DAY_OF_MONTH).toString()
                             val time = timedy + '/' + timemn + '/' + timeyr
                             Log.i("TestRun", "reg:"+reg)
-                            RoomCounterActivity().myRegRef.child(reg).child("outDate").setValue(time)
+                            CounterRoomManagement().myRegRef.child(reg).child("outDate").setValue(time)
 
                             val success: AlertDialog = builderSuccess.create()
                             success.show();

@@ -9,13 +9,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HotelManagement">
-        <activity android:name=".Test"></activity>
-        <activity
-            android:name=".CheckOutList"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".CheckInList"
-            android:screenOrientation="portrait" />
         <activity
             android:name=".CleanerRoomManagement"
             android:screenOrientation="portrait" />
