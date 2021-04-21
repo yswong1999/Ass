@@ -24,6 +24,12 @@ class ManagerHome : AppCompatActivity() {
             startActivity(Intent(this,TaskAllocation::class.java))
         }
 
+        val btnManagerAssignedTasks :Button = findViewById(R.id.btnManagerAssignedTasks)
+        btnManagerAssignedTasks.setOnClickListener()
+        {
+            startActivity(Intent(this,AssignedTask::class.java))
+        }
+
         val NotificationButton :ImageButton = findViewById(R.id.notificationBtn2)
         NotificationButton.setOnClickListener()
         {

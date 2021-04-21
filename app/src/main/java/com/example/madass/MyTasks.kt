@@ -33,9 +33,9 @@ class MyTasks : AppCompatActivity() {
                 myTaskList.clear()
                 for(s in snapshot.children){
 
-                    val myTaskTitle:String = s.child("taskTitle").getValue().toString()
-                    val myTaskContent:String = s.child("taskContent").getValue().toString()
-                    val myTaskDate:String = s.child("taskDeadline").getValue().toString()
+                    val myTaskTitle:String = s.child("title").getValue().toString()
+                    val myTaskContent:String = s.child("description").getValue().toString()
+                    val myTaskDate:String = s.child("dueDate").getValue().toString()
                     val taskId:String = s.key.toString()
                     val taskStatus:String  = s.child("taskStatus").getValue().toString()
 

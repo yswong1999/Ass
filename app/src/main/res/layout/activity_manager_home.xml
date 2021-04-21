@@ -120,5 +120,15 @@
         app:layout_constraintTop_toTopOf="@+id/notificationBtn2"
         app:layout_constraintVertical_bias="0.785" />
 
+    <Button
+        android:id="@+id/btnManagerAssignedTasks"
+        android:layout_width="400dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="12dp"
+        android:text="assigned tasks"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAnnouncement" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
 

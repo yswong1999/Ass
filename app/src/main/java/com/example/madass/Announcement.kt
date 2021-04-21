@@ -14,9 +14,6 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 class Announcement : AppCompatActivity() {
-//    companion object{
-//        var annID = 1;
-//    }
 
     val database = FirebaseDatabase.getInstance()
     val myAnnouncementRef = database.getReference("Announcement")
@@ -25,8 +22,6 @@ class Announcement : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_annoucement)
-
-        val btnAnnPost :Button = findViewById(R.id.btnApply)
 
         var getData = object: ValueEventListener {
 
@@ -47,6 +42,7 @@ class Announcement : AppCompatActivity() {
 
         myAnnouncementRef.addValueEventListener(getData)
 
+        val btnAnnPost :Button = findViewById(R.id.btnApply)
         btnAnnPost.setOnClickListener()
         {
             val id:String = currentIndex;

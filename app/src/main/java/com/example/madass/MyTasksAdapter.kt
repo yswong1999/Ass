@@ -32,7 +32,7 @@ class MyTasksAdapter (private val myTaskList :List<myTaskView>) :RecyclerView.Ad
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val currentItem = myTaskList[position]
         holder.myTaskTitleIdTV.setText(myTaskList[position].taskTitle)
-        holder.myTaskDateIdTV.setText("by :"+currentDateandTime)
+        holder.myTaskDateIdTV.setText("by :"+myTaskList[position].taskDeadline)
         //holder.myTaskDateIdTV.setText(myTaskList[position].taskDeadline)
         holder.myTaskContentIdTV.setText(myTaskList[position].taskContent)
 

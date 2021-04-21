@@ -1,7 +1,7 @@
 package com.example.madass
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.DataSnapshot
@@ -33,9 +33,9 @@ class AssignedTask : AppCompatActivity() {
                 assignedTaskList.clear()
                 for(s in snapshot.children){
 
-                    val assignedTaskTitle:String = s.child("taskTitle").getValue().toString()
-                    val assignedTaskContent:String = s.child("taskContent").getValue().toString()
-                    val assignedTaskDate:String = s.child("taskDeadline").getValue().toString()
+                    val assignedTaskTitle:String = s.child("title").getValue().toString()
+                    val assignedTaskContent:String = s.child("description").getValue().toString()
+                    val assignedTaskDate:String = s.child("dueDate").getValue().toString()
                     val assignedTaskStatus:String  = s.child("taskStatus").getValue().toString()
                     val checked:String = s.child("checked").getValue().toString()
                     val taskId = s.key.toString()
